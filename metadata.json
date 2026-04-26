@@ -1,0 +1,6 @@
+{
+  "name": "Activity Prompt Generator",
+  "description": "Generate comprehensive and customized LLM prompts for NDIS day service activity outlines.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
