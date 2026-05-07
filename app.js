@@ -223,6 +223,9 @@ You MUST structure the output EXACTLY using the following sections. Do not devia
 ### WHS REQUIREMENTS AND CONSIDERATIONS
 [Provide a bulleted list of 4-5 crucial Health and Safety considerations tailored to the location, activity type, accessibility level (${data.accessibilityLevel}), and group capacity (${data.capacityLevel}).]
 
+### STAFF GUIDE
+[Provide a comprehensive, detailed 2-3 paragraph companion guide for staff members explaining exactly how to run the activity on the ground. This guide is meant for staff to read a week before, a day before, or as they arrive on site to prep themselves. Include specific pointers, talking points, engagement techniques, and practical advice for supporting the participants.]
+
 ### PROPOSED SCHEDULE
 [Provide a table structure or clear week-by-week listing for exactly ${data.durationWeeks} weeks. Provide a specific, actionable theme or focus for each week. Do not group weeks together (e.g. no "Weeks 1-4"). Each week MUST have its own dedicated title and short description of the task/focus.]`;
 
