@@ -105,6 +105,25 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
             <div class="space-y-4">
               <h4 class="text-xs font-bold text-slate-800 uppercase tracking-wider">Logistics</h4>
+              <div class="grid grid-cols-2 gap-3">
+                <div class="space-y-1">
+                  <label class="text-[10px] text-slate-500 font-medium tracking-wide">Day (Optional)</label>
+                  <select id="f-dayOfWeek" class="w-full text-xs font-medium bg-slate-50 p-2.5 rounded shadow-inner border border-slate-100 outline-none focus:border-emerald-400 px-3 cursor-pointer">
+                    <option value="">Any</option>
+                    <option>Monday</option>
+                    <option>Tuesday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                    <option>Saturday</option>
+                    <option>Sunday</option>
+                  </select>
+                </div>
+                <div class="space-y-1">
+                  <label class="text-[10px] text-slate-500 font-medium tracking-wide">Start Date (Opt)</label>
+                  <input type="date" id="f-startDate" class="w-full text-xs font-medium bg-slate-50 p-2.5 rounded shadow-inner border border-slate-100 outline-none focus:border-emerald-400 px-3 min-h-[36px]">
+                </div>
+              </div>
               <div class="space-y-1">
                 <label class="text-[10px] text-slate-500 font-medium tracking-wide">Session Timing</label>
                 <select id="f-sessionType" class="w-full text-xs font-medium bg-slate-50 p-2.5 rounded shadow-inner border border-slate-100 outline-none focus:border-emerald-400 px-3 cursor-pointer">

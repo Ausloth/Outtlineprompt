@@ -136,6 +136,8 @@ function openForm(activity) {
   document.getElementById('f-activityName').value = activity.name === 'Custom Activity' ? '' : activity.name;
   document.getElementById('f-suburbCity').value = '';
   document.getElementById('f-durationWeeks').value = '24';
+  document.getElementById('f-dayOfWeek').value = '';
+  document.getElementById('f-startDate').value = '';
   document.getElementById('f-activityBlurb').value = activity.blurb || '';
   document.getElementById('f-sessionType').value = 'All Day';
   document.getElementById('f-availableTransport').value = '';
@@ -158,6 +160,8 @@ function generatePrompt() {
     activityName: document.getElementById('f-activityName').value,
     suburbCity: document.getElementById('f-suburbCity').value,
     durationWeeks: document.getElementById('f-durationWeeks').value,
+    dayOfWeek: document.getElementById('f-dayOfWeek').value,
+    startDate: document.getElementById('f-startDate').value,
     activityBlurb: document.getElementById('f-activityBlurb').value,
     sessionType: document.getElementById('f-sessionType').value,
     availableTransport: document.getElementById('f-availableTransport').value,
@@ -180,6 +184,8 @@ PARAMETERS:
 - Activity Blurb/Concept: ${data.activityBlurb}
 - Location / Suburb: ${data.suburbCity}
 - Duration: ${data.durationWeeks} weeks
+- Day of Week: ${data.dayOfWeek || "Not specified"}
+- Commencement Date: ${data.startDate || "Not specified"}
 - Session Type: ${data.sessionType}
 - Location Preference (Onsite/Offsite): ${data.locationPreference}
 - Transport Details: ${data.availableTransport || "None specified"}
@@ -199,8 +205,8 @@ You MUST structure the output EXACTLY using the following sections. Do not devia
 ### ACTIVITY INFORMATION AND OUTCOMES
 [Provide a warm, inclusive 2-3 sentence overview of the activity and its benefits, expanding on the core concept provided.]
 
-**Date:** [Insert current date]
-**Review Due date:** [Insert date 6 months from now]
+**Date / Commencement:** ${data.startDate ? data.startDate : '[Insert current date/Commencement Date]'}
+**Review Due date:** [Insert date 6 months from Commencement]
 **Location of activity:** ${data.suburbCity}
 **Staff:** To be rostered
 **Number of Clients (Min - Max):** ${data.minParticipants} to ${data.maxParticipants}
